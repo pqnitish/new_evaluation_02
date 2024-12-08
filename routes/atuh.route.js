@@ -13,7 +13,7 @@ router.post("/register",async(req,res,next)=>{
         next(error)
     }
 })
-router.post("/login",(req,res,next)=>{
+router.post("/login",async (req,res,next)=>{
 try {
     const {username,password} = req.body
     const user = await User.findOne({username});
